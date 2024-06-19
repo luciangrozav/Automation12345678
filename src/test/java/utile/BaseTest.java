@@ -70,6 +70,8 @@ public class BaseTest {
         {
             screenshotDirectory.mkdir();
         }
+
+        System.out.println("New commit- example and practice");
  // capture and save screenshot
 
         screenshotUtils.captureAndSaveScreenshots(testName);
