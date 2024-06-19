@@ -71,7 +71,7 @@ public class BaseTest {
             screenshotDirectory.mkdir();
         }
 
-        System.out.println("New commit- example and practice");
+        System.out.println("New commit- example and practice, on new branch");
  // capture and save screenshot
 
         screenshotUtils.captureAndSaveScreenshots(testName);
