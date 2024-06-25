@@ -32,8 +32,8 @@ public class BaseTest {
     @AfterClass
     public void tearDown()
     {
-        if(driver != null)
-            driver.quit(); // inchide browseru pt a nu se incarca memoria
+       // if(driver != null)
+           // driver.quit(); // inchide browseru pt a nu se incarca memoria
     }
 
 @AfterMethod

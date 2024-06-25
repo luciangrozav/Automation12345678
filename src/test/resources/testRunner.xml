@@ -5,4 +5,10 @@
             <class name="SimpleTest"/>
         </classes>
     </test>
+
+    <test name="Register User">
+        <classes>
+            <class name="tests.RegisterUser"/>
+        </classes>
+    </test>
 </suite>
