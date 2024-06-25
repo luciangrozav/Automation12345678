@@ -32,8 +32,8 @@ public class BaseTest {
     @AfterClass
     public void tearDown()
     {
-        if(driver != null)
-            driver.quit(); // inchide browseru pt a nu se incarca memoria
+       // if(driver != null)
+           // driver.quit(); // inchide browseru pt a nu se incarca memoria
     }
 
 @AfterMethod
@@ -70,6 +70,8 @@ public class BaseTest {
         {
             screenshotDirectory.mkdir();
         }
+
+        System.out.println("New commit- example and practice, on new branch (2)");
  // capture and save screenshot
 
         screenshotUtils.captureAndSaveScreenshots(testName);
