@@ -1,7 +1,6 @@
 package Actions;
 
 import WebElements.SimpleElements;
-import net.bytebuddy.build.Plugin;
 import org.openqa.selenium.WebDriver;
 
 public class SimpleActions {

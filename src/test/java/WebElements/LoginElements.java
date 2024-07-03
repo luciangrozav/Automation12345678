@@ -42,4 +42,8 @@ public class LoginElements {
         return driver.findElement(By.xpath("//h2"));
     }
 
+    public WebElement errorForbiddenAccess()
+    {
+        return driver.findElement(By.cssSelector("#errorForbiddenAccess"));
+    }
 }

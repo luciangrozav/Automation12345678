@@ -1,11 +1,16 @@
 package Actions;
 
 import WebElements.RegisterElements;
+import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Wait;
+import utile.ConfigLoader;
 
 public class Register {
 
     private RegisterElements elements = null;
+    private Wait<WebDriver> wait;
+    private ConfigLoader configLoader;
 
     public Register(WebDriver driver)
     {
@@ -49,7 +54,37 @@ public class Register {
         elements.trainer().click();
     }
 
-    public void submit() {
+    public void clickSubmitButton() {
         elements.submit().click();
+    }
+
+    public void registerUser(boolean isTrainer)
+    {
+
+        configLoader = new ConfigLoader("src/test/resources/proprietati/dateUser1.properties");
+        String firstName = configLoader.getProperty("firstName");
+        String lastName = configLoader.getProperty("lastName");
+        String numarTelefon = configLoader.getProperty("numarTelefon");
+        String email = configLoader.getProperty("email");
+        String city = configLoader.getProperty("city");
+        String parola = configLoader.getProperty("parola");
+
+        // Input user
+        setFirstname(firstName);
+        setLastname(lastName);
+        setPhoneNumber(numarTelefon);
+        setEmail(email);
+        setCity(city);
+        password(parola);
+
+        if (isTrainer)
+        {
+            trainer();
+        } else {
+            customer();
+        }
+
+        // Click pe Sign Up button
+        clickSubmitButton();
     }
 }

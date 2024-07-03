@@ -17,7 +17,7 @@ import java.io.File;
 public class BaseTest {
 
 
-    public WebDriver driver; // driver = null
+    public WebDriver driver, driver2; // driver = null
     private ExtentTest extentTest;
     private ScreenshotUtils screenshotUtils;
 
@@ -27,6 +27,7 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         screenshotUtils = new ScreenshotUtils(driver);
+        driver.get("http://apptest.go.ro:9999/login");
     }
 
     @AfterClass
