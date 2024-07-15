@@ -12,9 +12,21 @@
 <!--            </classes>-->
 <!--        </test>-->
 
-    <test name="Login User">
-        <classes>
-            <class name="tests.LoginUser"/>
-        </classes>
-    </test>
+<!--    <test name="Login User">-->
+<!--        <classes>-->
+<!--            <class name="tests.LoginUser"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <!--    <test name="Calendar Test">-->
+    <!--        <classes>-->
+    <!--            <class name="tests.CalendarTest"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+        <test name="Cucumber Calendar Test">
+            <classes>
+                <class name="runner.TestRunner"/>
+            </classes>
+        </test>
 </suite>

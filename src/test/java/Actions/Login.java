@@ -23,6 +23,7 @@ public class Login {
     }
 
     public void setUsername(String username) {
+        wait.until(d -> element.userEmail().isDisplayed());
         element.userEmail().sendKeys(username);
     }
 
