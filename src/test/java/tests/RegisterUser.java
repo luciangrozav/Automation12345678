@@ -12,16 +12,18 @@ public class RegisterUser extends BaseTest {
     private Register register = null;
 
     @Test
-    public void registerUser()
+    public void registerUserTest()
     {
         initTest("Register User");
-
+        driver.get("https://parabank.parasoft.com/parabank/index.htm");
         login = new Login(driver);
-        register = new Register(driver); // actiunea
-        login.clickRegisterButton();
+        register = new Register(driver);// actiunea
 
-        Assert.assertTrue(register.getSignUpText().equalsIgnoreCase("Sign Up"));
+        login.clickRegisterButtonOnLoginPage();
+        Assert.assertTrue(register.getSignUpText().equalsIgnoreCase("Signing up is easy!"));
 
-        register.registerUser(true);
+        register.registerUser();
+        Assert.assertTrue(register.getSignUpText().equalsIgnoreCase("Welcome luci123"));
+
     }
 }

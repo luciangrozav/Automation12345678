@@ -22,69 +22,74 @@ public class Register {
         return elements.signUpText().getText();
     }
 
-    public void setFirstname(String username) {
-        elements.firstname().sendKeys(username);
+    public void setFirstname(String firstName) {
+        elements.firstname().sendKeys(firstName);
     }
 
-    public void setLastname(String lastname) {
-        elements.lastname().sendKeys(lastname);
+    public void setLastname(String lastName) {
+        elements.lastname().sendKeys(lastName);
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        elements.phonenumber().sendKeys(phoneNumber);
-    }
-
-    public void password(String password) {
-        elements.password().sendKeys(password);
-    }
-
-    public void setEmail(String email) {
-        elements.email().sendKeys(email);
+    public void setAddress(String address) {
+        elements.address().sendKeys(address);
     }
 
     public void setCity(String city) {
         elements.city().sendKeys(city);
     }
 
-    public void customer() {
-        elements.customer().click();
+    public void password(String password) {
+        elements.password().sendKeys(password);
     }
 
-    public void trainer() {
-        elements.trainer().click();
+    public void setState(String state) {
+        elements.state().sendKeys(state);
     }
 
-    public void clickSubmitButton() {
-        elements.submit().click();
-    }
+    public void setZipCode(String zipCode) { elements.zipCode().sendKeys(zipCode); }
 
-    public void registerUser(boolean isTrainer)
+    public void setPhone(String phone) { elements.phone().sendKeys(phone);}
+
+    public void setSsn(String ssn) { elements.ssn().sendKeys(ssn);}
+
+    public void setUsername(String username) { elements.username().sendKeys(username);}
+
+    public void setPassword(String password) { elements.password().sendKeys(password);}
+
+    public void setConfirm(String confirm) { elements.confirm().sendKeys(confirm);}
+
+    public void clickRegisterButton() { elements.register().click(); }
+
+    public void registerUser()
     {
 
         configLoader = new ConfigLoader("src/test/resources/proprietati/dateUser1.properties");
+
         String firstName = configLoader.getProperty("firstName");
         String lastName = configLoader.getProperty("lastName");
-        String numarTelefon = configLoader.getProperty("numarTelefon");
-        String email = configLoader.getProperty("email");
+        String address = configLoader.getProperty("address");
         String city = configLoader.getProperty("city");
-        String parola = configLoader.getProperty("parola");
+        String state = configLoader.getProperty("state");
+        String zipCode = configLoader.getProperty("zipCode");
+        String phone = configLoader.getProperty("phone");
+        String ssn = configLoader.getProperty("ssn");
+        String username = configLoader.getProperty("username");
+        String password = configLoader.getProperty("password");
+        String confirm = configLoader.getProperty("confirm");
 
         // Input user
         setFirstname(firstName);
         setLastname(lastName);
-        setPhoneNumber(numarTelefon);
-        setEmail(email);
+        setAddress(address);
         setCity(city);
-        password(parola);
+        setState(state);
+        setZipCode(zipCode);
+        setPhone(phone);
+        setSsn(ssn);
+        setUsername(username);
+        setPassword(password);
+        setConfirm(confirm);
 
-        if (isTrainer)
-        {
-            trainer();
-        } else {
-            customer();
-        }
-
-        // Click pe Sign Up button
-        clickSubmitButton();
+        clickRegisterButton();
     }
 }

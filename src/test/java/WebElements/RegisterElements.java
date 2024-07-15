@@ -13,52 +13,67 @@ public RegisterElements (WebDriver driver) {  // Constructor
 }
 
 public WebElement signUpText() {
-    return driver.findElement(By.xpath("//h2"));
+    return driver.findElement(By.xpath("//h1"));
 }
 
 public WebElement firstname()
 {
-    return driver.findElement(By.cssSelector("#firstName"));
+    return driver.findElement(By.id("customer.firstName"));
 }
 
     public WebElement lastname()
     {
-        return driver.findElement(By.cssSelector("#lastName"));
+        return driver.findElement(By.id("customer.lastName"));
     }
 
-    public WebElement phonenumber()
+    public WebElement address()
     {
-        return driver.findElement(By.cssSelector("#phoneNumber"));
-    }
-
-    public WebElement email()
-    {
-        return driver.findElement(By.cssSelector("#email"));
-    }
-
-    public WebElement password()
-    {
-        return driver.findElement(By.cssSelector("#password"));
+        return driver.findElement(By.id("customer.address.street"));
     }
 
     public WebElement city()
     {
-        return driver.findElement(By.cssSelector("#city"));
+        return driver.findElement(By.id("customer.address.city"));
     }
 
-    public WebElement customer()
+    public WebElement state()
     {
-        return driver.findElement(By.cssSelector("#customer"));
+        return driver.findElement(By.id("customer.address.state"));
     }
 
-    public WebElement trainer()
+    public WebElement zipCode()
     {
-        return driver.findElement(By.cssSelector("#trainer"));
+        return driver.findElement(By.id("customer.address.zipCode"));
     }
 
-    public WebElement submit()
+    public WebElement phone()
     {
-        return driver.findElement(By.cssSelector("#submit"));
+        return driver.findElement(By.id("customer.phoneNumber"));
+    }
+
+    public WebElement ssn()
+    {
+        return driver.findElement(By.id("customer.ssn"));
+    }
+
+    public WebElement username()
+    {
+        return driver.findElement(By.id("customer.username"));
+    }
+
+    public WebElement password()
+    {
+        return driver.findElement(By.id("customer.password"));
+    }
+
+    public WebElement confirm()
+    {
+        return driver.findElement(By.id("repeatedPassword"));
+    }
+
+    public WebElement register()
+    {
+        return driver.findElement(By.xpath("//input[@value='Register']"));
     }
 
 

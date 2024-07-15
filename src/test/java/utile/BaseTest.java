@@ -27,14 +27,14 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         screenshotUtils = new ScreenshotUtils(driver);
-        driver.get("http://apptest.go.ro:9999/login");
+        driver.get("https://parabank.parasoft.com/parabank/index.htm");
     }
 
     @AfterClass
     public void tearDown()
     {
-       // if(driver != null)
-           // driver.quit(); // inchide browseru pt a nu se incarca memoria
+//        if(driver != null)
+//            driver.quit(); // inchide browseru pt a nu se incarca memoria
     }
 
 @AfterMethod
