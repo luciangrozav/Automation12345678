@@ -58,24 +58,24 @@ public class Register {
         elements.submit().click();
     }
 
-    public void registerUser(boolean isTrainer)
+    public void registerUser(boolean isTrainer, String email, String password, String phoneNumber)
     {
 
         configLoader = new ConfigLoader("src/test/resources/proprietati/dateUser1.properties");
         String firstName = configLoader.getProperty("firstName");
         String lastName = configLoader.getProperty("lastName");
-        String numarTelefon = configLoader.getProperty("numarTelefon");
-        String email = configLoader.getProperty("email");
+//        String numarTelefon = configLoader.getProperty("numarTelefon");
+//        String email = configLoader.getProperty("email");
         String city = configLoader.getProperty("city");
-        String parola = configLoader.getProperty("parola");
+//        String parola = configLoader.getProperty("parola");
 
         // Input user
         setFirstname(firstName);
         setLastname(lastName);
-        setPhoneNumber(numarTelefon);
+        setPhoneNumber(phoneNumber);
         setEmail(email);
         setCity(city);
-        password(parola);
+        password(password);
 
         if (isTrainer)
         {
