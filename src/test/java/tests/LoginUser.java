@@ -21,7 +21,7 @@ public class LoginUser extends BaseTest {
     @Test
     public void loginUser() {
         initTest("Login User");
-        driver.get("https://parabank.parasoft.com/parabank/index.htm");
+
         login = new Login(driver);
 
         ConfigLoader configLoader = new ConfigLoader("src/test/resources/proprietati/dateUser1.properties");

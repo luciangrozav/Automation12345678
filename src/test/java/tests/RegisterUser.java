@@ -17,7 +17,7 @@ public class RegisterUser extends BaseTest {
         initTest("Register User");
         driver.get("https://parabank.parasoft.com/parabank/index.htm");
         login = new Login(driver);
-        register = new Register(driver);// actiunea
+        register = new Register(driver);
 
         login.clickRegisterButtonOnLoginPage();
         Assert.assertTrue(register.getSignUpText().equalsIgnoreCase("Signing up is easy!"));
